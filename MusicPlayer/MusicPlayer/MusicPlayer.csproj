@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FA1970E-3E5C-4678-9927-B5C53724DC75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MusicPlayer</RootNamespace>
+    <AssemblyName>MusicPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp.Pro, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.Pro.6.1.1\lib\net472\FontAwesome.Sharp.Pro.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomControl\CButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\choosePlayList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\choosePlayList.Designer.cs">
+      <DependentUpon>choosePlayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\history.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\history.Designer.cs">
+      <DependentUpon>history.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\history_freq.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\history_freq.Designer.cs">
+      <DependentUpon>history_freq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\item.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\item.Designer.cs">
+      <DependentUpon>item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\love.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\love.Designer.cs">
+      <DependentUpon>love.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\music.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\music.Designer.cs">
+      <DependentUpon>music.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\playlist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\playlist.Designer.cs">
+      <DependentUpon>playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DetailMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailMusic.Designer.cs">
+      <DependentUpon>DetailMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="image.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>image.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ListLove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListLove.Designer.cs">
+      <DependentUpon>ListLove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayListMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayListMusic.Designer.cs">
+      <DependentUpon>PlayListMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayMusic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayMusic.Designer.cs">
+      <DependentUpon>PlayMusic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables\globalVariable.cs" />
+    <Compile Include="Variables\ListFormPanel.cs" />
+    <EmbeddedResource Include="CustomControl\choosePlayList.resx">
+      <DependentUpon>choosePlayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\history.resx">
+      <DependentUpon>history.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\history_freq.resx">
+      <DependentUpon>history_freq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\item.resx">
+      <DependentUpon>item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\love.resx">
+      <DependentUpon>love.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\music.resx">
+      <DependentUpon>music.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\playlist.resx">
+      <DependentUpon>playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailMusic.resx">
+      <DependentUpon>DetailMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="image.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>image.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListLove.resx">
+      <DependentUpon>ListLove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayListMusic.resx">
+      <DependentUpon>PlayListMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayMusic.resx">
+      <DependentUpon>PlayMusic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\609803.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg09.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg08.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg07.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lg06.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mv35.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

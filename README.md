@@ -29,7 +29,7 @@
 ## PROJECT DETAILS
 <a name="congtrinh"></a>
 
-[Source code]()
+[Source code](https://github.com/truong11062002/MusicPlayer/tree/main/MusicPlayer/MusicPlayer)
 
 ## IMPLEMENTATION
 <a name="implement"></a>

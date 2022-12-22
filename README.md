@@ -20,7 +20,7 @@
 
 ## PROJECT INTRODUCTION
 <a name="gioithieumonhoc"></a>
-### Technologies used / Languages
+### Used Technologies / Languages
 
 * C# Windows Form
 * .NET Framework
